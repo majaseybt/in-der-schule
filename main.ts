@@ -1,38 +1,13 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    input2 = "" + input2 + "A"
-    basic.showString("A")
-})
-input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
-    if (code == input2) {
-        basic.showLeds(`
-            . . . . .
-            . . . . #
-            . . . # .
-            # . # . .
-            . # . . .
-            `)
-    } else {
-        basic.showLeds(`
-            # . . . #
-            . # . # .
-            . . # . .
-            . # . # .
-            # . . . #
-            `)
-    }
+    text_list += 1
+    basic.showString("" + (namen[x]))
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
-    input2 = "" + input2 + "B"
-    basic.showString("B")
+    text_list += -1
+    basic.showString("" + (namen[x]))
 })
-let input2 = ""
-let code = ""
-code = "AABBBA"
-input2 = ""
-basic.showLeds(`
-    # . . . #
-    . # . # .
-    . . # . .
-    . # . # .
-    # . . . #
-    `)
+let text_list = 0
+let x = 0
+let namen: string[] = []
+namen = ["A", "B", "C"]
+x = 0
